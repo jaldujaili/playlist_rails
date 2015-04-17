@@ -82,3 +82,4 @@ Migrating to CreateAlbums (20150416210403)
             WHERE name='index_users_on_name' AND type='index'
 
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
