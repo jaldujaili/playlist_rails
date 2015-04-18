@@ -15,35 +15,50 @@ ActiveRecord::Schema.define(version: 20150416210403) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "playlist_id"
+    t.integer  "artist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
+  add_index "albums", ["artist_id"], name: "index_albums_on_artist_id"
+  add_index "albums", ["playlist_id"], name: "index_albums_on_playlist_id"
   add_index "albums", ["title"], name: "index_albums_on_title"
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "playlist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "artists", ["name"], name: "index_artists_on_name"
+  add_index "artists", ["playlist_id"], name: "index_artists_on_playlist_id"
 
   create_table "playlists", force: :cascade do |t|
     t.string   "title"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "playlists", ["title"], name: "index_playlists_on_title"
+  add_index "playlists", ["user_id"], name: "index_playlists_on_user_id"
 
   create_table "songs", force: :cascade do |t|
     t.string   "title"
     t.integer  "length"
     t.string   "genre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "playlist_id"
+    t.integer  "artist_id"
+    t.integer  "album_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "songs", ["album_id"], name: "index_songs_on_album_id"
+  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
+  add_index "songs", ["playlist_id"], name: "index_songs_on_playlist_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

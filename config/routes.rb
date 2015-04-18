@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
       scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
 
-      resources :playlist, :song, :artist, :album, :user
+      resources :users, only: [:show, :create, :update, :destroy] do
+        resources :playlists do
+          resources :songs, :artists, :albums
+        end
+      end
     end
   end
 end

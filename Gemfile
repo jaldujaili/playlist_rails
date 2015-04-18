@@ -44,6 +44,10 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem "rspec-rails"
   gem "factory_girl_rails"
+  gem 'rest-client', '~> 1.8.0'
+  gem 'mime-types', '~> 2.4.3'
+  gem 'netrc', '~> 0.10.3'
+  gem 'rdoc', '~> 4.2.0'
 end
 
 group :test do
@@ -55,3 +59,4 @@ end
 
 gem "devise"
 gem 'ffaker', :group => [:development, :test]
+
