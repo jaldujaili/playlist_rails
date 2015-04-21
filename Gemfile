@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -41,9 +41,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'guard-rspec', require: false
-  gem "rspec-rails"
-  gem "factory_girl_rails"
   gem 'rest-client', '~> 1.8.0'
   gem 'mime-types', '~> 2.4.3'
   gem 'netrc', '~> 0.10.3'
@@ -51,8 +48,10 @@ group :development, :test do
 end
 
 group :test do
-  
-  
+
+  gem 'guard-rspec', require: false
+  gem "rspec-rails", require: false
+  gem "factory_girl_rails"
   gem "shoulda-matchers"
   gem 'database_cleaner'
 end

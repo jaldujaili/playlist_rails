@@ -1,4 +1,6 @@
 class Api::V1::AlbumsController < ApplicationController
+  before_filter :authorize, only: [:destroy, :update]
+  respond_to :json
 
       def index
         @album = Album.all
@@ -13,13 +15,13 @@ class Api::V1::AlbumsController < ApplicationController
         if @album.save
           render json: @album, status: 201, location: [:api, @album]
         else
-          render json {album: {errors: @album.erros}}.to_json, status 422
+          render json: { album: {errors: @album.errors}}.to_json, status: 422
       end
 
       def update
         @album = Album.find(params[:id])
 
-        if @album.update_attribute(album_params)
+        if @album.update(album_params)
           render json: @album, status: 200, location: [:api, @album]
       end
 
@@ -28,7 +30,12 @@ class Api::V1::AlbumsController < ApplicationController
         @album.destroy
         head 204
       end
+          private
         def album_params
           params.require(:album).permit(:title)
+        end
       end
-    end
+      end
+end
+
+
