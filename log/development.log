@@ -11084,3 +11084,1502 @@ SQLite3::ConstraintException: UNIQUE constraint failed: users.auth_token: INSERT
   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password") VALUES (?, ?, ?)[0m  [["name", "Rosie Williamson"], ["email", "kadin@muellercarroll.com"], ["encrypted_password", "$2a$10$cbXk.Q9xwEDvKsZQJF9bgu8K5LC7OQPFmXCYSVeDLtrAKRcU2nWZi"]]
 SQLite3::ConstraintException: UNIQUE constraint failed: users.auth_token: INSERT INTO "users" ("name", "email", "encrypted_password") VALUES (?, ?, ?)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'nick_morar@gleichner.info' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password") VALUES (?, ?, ?)[0m  [["name", "Hallie Hoeger"], ["email", "nick_morar@gleichner.info"], ["encrypted_password", "$2a$10$xHMAggozKWQLWgd.5KKvIuqAjqQFY5HE6hTnbvPUuu/lfa/0ZWlAi"]]
+SQLite3::ConstraintException: column auth_token is not unique: INSERT INTO "users" ("name", "email", "encrypted_password") VALUES (?, ?, ?)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "5fXjj9ictPX3pqEMEpcw"]]
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'adolph@goldner.ca' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "auth_token") VALUES (?, ?, ?, ?)  [["name", "Consuelo Crooks Sr."], ["email", "adolph@goldner.ca"], ["encrypted_password", "$2a$10$vgRF7H4DXaL8dxq.57BVJOf0PZd7Oxb/ElkGBhbBbMTwMDlhTBNKq"], ["auth_token", "5fXjj9ictPX3pqEMEpcw"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Human Group Executive"], ["user_id", 2], ["created_at", "2015-04-21 16:40:11.779314"], ["updated_at", "2015-04-21 16:40:11.779314"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Customer Research Facilitator"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.784670"], ["updated_at", "2015-04-21 16:40:11.784670"]]
+  [1m[35m (23.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dynamic Factors Designer"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.810229"], ["updated_at", "2015-04-21 16:40:11.810229"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Legacy Mobility Engineer"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.814568"], ["updated_at", "2015-04-21 16:40:11.814568"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Future Interactions Analyst"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.817637"], ["updated_at", "2015-04-21 16:40:11.817637"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Principal Data Engineer"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.820695"], ["updated_at", "2015-04-21 16:40:11.820695"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Corporate Usability Producer"], ["user_id", 2], ["created_at", "2015-04-21 16:40:11.823582"], ["updated_at", "2015-04-21 16:40:11.823582"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Human Accountability Agent"], ["user_id", 1], ["created_at", "2015-04-21 16:40:11.826533"], ["updated_at", "2015-04-21 16:40:11.826533"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Investor Implementation Administrator"], ["user_id", 2], ["created_at", "2015-04-21 16:40:11.830620"], ["updated_at", "2015-04-21 16:40:11.830620"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Legacy Branding Manager"], ["user_id", 2], ["created_at", "2015-04-21 16:40:11.834613"], ["updated_at", "2015-04-21 16:40:11.834613"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "German Rippin"], ["playlist_id", 6], ["created_at", "2015-04-21 16:40:11.874956"], ["updated_at", "2015-04-21 16:40:11.874956"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mr. Christiana Macejkovic"], ["playlist_id", 6], ["created_at", "2015-04-21 16:40:11.878226"], ["updated_at", "2015-04-21 16:40:11.878226"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dr. Thelma Botsford"], ["playlist_id", 1], ["created_at", "2015-04-21 16:40:11.881937"], ["updated_at", "2015-04-21 16:40:11.881937"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Coty Aufderhar"], ["playlist_id", 2], ["created_at", "2015-04-21 16:40:11.885196"], ["updated_at", "2015-04-21 16:40:11.885196"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Vincenza Bashirian"], ["playlist_id", 6], ["created_at", "2015-04-21 16:40:11.888558"], ["updated_at", "2015-04-21 16:40:11.888558"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Nayeli Daniel"], ["playlist_id", 7], ["created_at", "2015-04-21 16:40:11.892043"], ["updated_at", "2015-04-21 16:40:11.892043"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Linnie Hegmann"], ["playlist_id", 5], ["created_at", "2015-04-21 16:40:11.894990"], ["updated_at", "2015-04-21 16:40:11.894990"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Eveline Mayer"], ["playlist_id", 7], ["created_at", "2015-04-21 16:40:11.897912"], ["updated_at", "2015-04-21 16:40:11.897912"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mr. Nona O'Reilly"], ["playlist_id", 5], ["created_at", "2015-04-21 16:40:11.900779"], ["updated_at", "2015-04-21 16:40:11.900779"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Elda Ward Sr."], ["playlist_id", 8], ["created_at", "2015-04-21 16:40:11.904012"], ["updated_at", "2015-04-21 16:40:11.904012"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "brown"], ["playlist_id", 9], ["artist_id", 8], ["created_at", "2015-04-21 16:40:12.004860"], ["updated_at", "2015-04-21 16:40:12.004860"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "olive"], ["playlist_id", 6], ["artist_id", 6], ["created_at", "2015-04-21 16:40:12.008615"], ["updated_at", "2015-04-21 16:40:12.008615"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "purple"], ["playlist_id", 4], ["artist_id", 5], ["created_at", "2015-04-21 16:40:12.019848"], ["updated_at", "2015-04-21 16:40:12.019848"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "teal"], ["playlist_id", 9], ["artist_id", 8], ["created_at", "2015-04-21 16:40:12.023361"], ["updated_at", "2015-04-21 16:40:12.023361"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "black"], ["playlist_id", 4], ["artist_id", 8], ["created_at", "2015-04-21 16:40:12.027306"], ["updated_at", "2015-04-21 16:40:12.027306"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "lime"], ["playlist_id", 3], ["artist_id", 1], ["created_at", "2015-04-21 16:40:12.030487"], ["updated_at", "2015-04-21 16:40:12.030487"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "brown"], ["playlist_id", 7], ["artist_id", 4], ["created_at", "2015-04-21 16:40:12.034676"], ["updated_at", "2015-04-21 16:40:12.034676"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "yellow"], ["playlist_id", 8], ["artist_id", 3], ["created_at", "2015-04-21 16:40:12.038341"], ["updated_at", "2015-04-21 16:40:12.038341"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "red"], ["playlist_id", 1], ["artist_id", 9], ["created_at", "2015-04-21 16:40:12.042622"], ["updated_at", "2015-04-21 16:40:12.042622"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "gray"], ["playlist_id", 7], ["artist_id", 2], ["created_at", "2015-04-21 16:40:12.046932"], ["updated_at", "2015-04-21 16:40:12.046932"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Red Monster"], ["length", 1], ["genre", "Celery Salt"], ["playlist_id", 8], ["artist_id", 3], ["album_id", 10], ["created_at", "2015-04-21 16:40:12.058304"], ["updated_at", "2015-04-21 16:40:12.058304"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Ultra World from Hell"], ["length", 1], ["genre", "Ostrich"], ["playlist_id", 10], ["artist_id", 5], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.079110"], ["updated_at", "2015-04-21 16:40:12.079110"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ultra Diaries"], ["length", 1], ["genre", "Emu"], ["playlist_id", 5], ["artist_id", 5], ["album_id", 8], ["created_at", "2015-04-21 16:40:12.083773"], ["updated_at", "2015-04-21 16:40:12.083773"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Case of the Missing Green Blow"], ["length", 1], ["genre", "Fenugreek"], ["playlist_id", 10], ["artist_id", 7], ["album_id", 3], ["created_at", "2015-04-21 16:40:12.088464"], ["updated_at", "2015-04-21 16:40:12.088464"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Fake Beast from the Black Lagoon"], ["length", 1], ["genre", "Lemon Pepper"], ["playlist_id", 7], ["artist_id", 3], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.093130"], ["updated_at", "2015-04-21 16:40:12.093130"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Red World 2: Son of Red World"], ["length", 1], ["genre", "Pignut"], ["playlist_id", 10], ["artist_id", 10], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.097725"], ["updated_at", "2015-04-21 16:40:12.097725"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Wolves"], ["length", 1], ["genre", "Breadfruit"], ["playlist_id", 2], ["artist_id", 4], ["album_id", 6], ["created_at", "2015-04-21 16:40:12.103243"], ["updated_at", "2015-04-21 16:40:12.103243"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hungry Wizard"], ["length", 1], ["genre", "Blood Orange"], ["playlist_id", 4], ["artist_id", 4], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.107826"], ["updated_at", "2015-04-21 16:40:12.107826"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Red Cousins from Hell"], ["length", 1], ["genre", "Bar-B-Que Spice"], ["playlist_id", 5], ["artist_id", 1], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.111525"], ["updated_at", "2015-04-21 16:40:12.111525"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Action Diaries"], ["length", 1], ["genre", "Marrow soup"], ["playlist_id", 3], ["artist_id", 6], ["album_id", 3], ["created_at", "2015-04-21 16:40:12.115610"], ["updated_at", "2015-04-21 16:40:12.115610"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Forbidden Diaries"], ["length", 1], ["genre", "Caraway Seed"], ["playlist_id", 7], ["artist_id", 2], ["album_id", 6], ["created_at", "2015-04-21 16:40:12.119685"], ["updated_at", "2015-04-21 16:40:12.119685"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Curse of the Ultra Monster"], ["length", 1], ["genre", "Pumpkin Pie Spice"], ["playlist_id", 8], ["artist_id", 1], ["album_id", 1], ["created_at", "2015-04-21 16:40:12.123876"], ["updated_at", "2015-04-21 16:40:12.123876"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Curse of the Brain"], ["length", 1], ["genre", "Rosemary"], ["playlist_id", 4], ["artist_id", 2], ["album_id", 9], ["created_at", "2015-04-21 16:40:12.128169"], ["updated_at", "2015-04-21 16:40:12.128169"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Je Vous Presente, Genesis"], ["length", 1], ["genre", "Cilantro"], ["playlist_id", 10], ["artist_id", 2], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.131927"], ["updated_at", "2015-04-21 16:40:12.131927"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Witch from Schall Circle/Lakeside Green"], ["length", 1], ["genre", "Pork, Bacon"], ["playlist_id", 10], ["artist_id", 2], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.151431"], ["updated_at", "2015-04-21 16:40:12.151431"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Rise of the Nuclear Brains"], ["length", 1], ["genre", "Guinea Hen"], ["playlist_id", 4], ["artist_id", 3], ["album_id", 10], ["created_at", "2015-04-21 16:40:12.156939"], ["updated_at", "2015-04-21 16:40:12.156939"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Wolf from Sunshine-Gardens"], ["length", 1], ["genre", "Ham"], ["playlist_id", 3], ["artist_id", 9], ["album_id", 2], ["created_at", "2015-04-21 16:40:12.161006"], ["updated_at", "2015-04-21 16:40:12.161006"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Friday Without a Gypsy"], ["length", 1], ["genre", "Organs"], ["playlist_id", 1], ["artist_id", 8], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.165502"], ["updated_at", "2015-04-21 16:40:12.165502"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Green Wolf"], ["length", 1], ["genre", "Salad Herbs"], ["playlist_id", 5], ["artist_id", 8], ["album_id", 3], ["created_at", "2015-04-21 16:40:12.169057"], ["updated_at", "2015-04-21 16:40:12.169057"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Beast from Northwoods West"], ["length", 1], ["genre", "Hickory Salt"], ["playlist_id", 4], ["artist_id", 5], ["album_id", 9], ["created_at", "2015-04-21 16:40:12.174793"], ["updated_at", "2015-04-21 16:40:12.174793"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Return of the Man"], ["length", 1], ["genre", "Artichoke"], ["playlist_id", 5], ["artist_id", 1], ["album_id", 10], ["created_at", "2015-04-21 16:40:12.180291"], ["updated_at", "2015-04-21 16:40:12.180291"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Invasion of the Nuclear Wizard"], ["length", 1], ["genre", "Pumpkin"], ["playlist_id", 3], ["artist_id", 1], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.184036"], ["updated_at", "2015-04-21 16:40:12.184036"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Forbidden Beast from Mars"], ["length", 1], ["genre", "Sea grape"], ["playlist_id", 8], ["artist_id", 7], ["album_id", 1], ["created_at", "2015-04-21 16:40:12.189194"], ["updated_at", "2015-04-21 16:40:12.189194"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Season of the Men"], ["length", 1], ["genre", "Water caltrop"], ["playlist_id", 9], ["artist_id", 10], ["album_id", 2], ["created_at", "2015-04-21 16:40:12.195077"], ["updated_at", "2015-04-21 16:40:12.195077"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Christmas on Aurelio Stravenue"], ["length", 1], ["genre", "Tangerine"], ["playlist_id", 8], ["artist_id", 8], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.202834"], ["updated_at", "2015-04-21 16:40:12.202834"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Tokyo Mutant"], ["length", 1], ["genre", "Pea"], ["playlist_id", 5], ["artist_id", 10], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.209202"], ["updated_at", "2015-04-21 16:40:12.209202"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "I Married a Blue Rain"], ["length", 1], ["genre", "Bay Leaf"], ["playlist_id", 10], ["artist_id", 9], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.213955"], ["updated_at", "2015-04-21 16:40:12.213955"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Tokyo Ninja"], ["length", 1], ["genre", "Eggplant"], ["playlist_id", 7], ["artist_id", 5], ["album_id", 8], ["created_at", "2015-04-21 16:40:12.218996"], ["updated_at", "2015-04-21 16:40:12.218996"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Cat from South of Lake Ave"], ["length", 1], ["genre", "Buffalo, Bison"], ["playlist_id", 2], ["artist_id", 3], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.223780"], ["updated_at", "2015-04-21 16:40:12.223780"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Action Blow with a Thousand Faces"], ["length", 1], ["genre", "Opossum"], ["playlist_id", 6], ["artist_id", 7], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.229671"], ["updated_at", "2015-04-21 16:40:12.229671"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "War of the Tears"], ["length", 1], ["genre", "Duck Liver"], ["playlist_id", 8], ["artist_id", 4], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.233721"], ["updated_at", "2015-04-21 16:40:12.233721"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Dangerous Dreams from Across the Ocean"], ["length", 1], ["genre", "Thyme"], ["playlist_id", 6], ["artist_id", 1], ["album_id", 10], ["created_at", "2015-04-21 16:40:12.238952"], ["updated_at", "2015-04-21 16:40:12.238952"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "When Oliver Met Lilliana"], ["length", 1], ["genre", "Salad Herbs"], ["playlist_id", 7], ["artist_id", 9], ["album_id", 6], ["created_at", "2015-04-21 16:40:12.243724"], ["updated_at", "2015-04-21 16:40:12.243724"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Blow from Outer Space"], ["length", 1], ["genre", "Safflower"], ["playlist_id", 3], ["artist_id", 8], ["album_id", 9], ["created_at", "2015-04-21 16:40:12.248727"], ["updated_at", "2015-04-21 16:40:12.248727"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Ninja from East Renton"], ["length", 1], ["genre", "Nut"], ["playlist_id", 6], ["artist_id", 5], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.252669"], ["updated_at", "2015-04-21 16:40:12.252669"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Dangerous Clash with a Thousand Faces"], ["length", 1], ["genre", "Salsify"], ["playlist_id", 1], ["artist_id", 2], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.256369"], ["updated_at", "2015-04-21 16:40:12.256369"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "War of the Pickpocket"], ["length", 1], ["genre", "Venison"], ["playlist_id", 1], ["artist_id", 6], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.259926"], ["updated_at", "2015-04-21 16:40:12.259926"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Wolf from the Black Lagoon"], ["length", 1], ["genre", "Tripe"], ["playlist_id", 4], ["artist_id", 3], ["album_id", 10], ["created_at", "2015-04-21 16:40:12.263773"], ["updated_at", "2015-04-21 16:40:12.263773"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Tokyo Identity"], ["length", 1], ["genre", "Turmeric"], ["playlist_id", 5], ["artist_id", 1], ["album_id", 1], ["created_at", "2015-04-21 16:40:12.272141"], ["updated_at", "2015-04-21 16:40:12.272141"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Action Wizard"], ["length", 1], ["genre", "Goose"], ["playlist_id", 5], ["artist_id", 6], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.277628"], ["updated_at", "2015-04-21 16:40:12.277628"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Je Vous Presente, Anissa"], ["length", 1], ["genre", "Organ Meats"], ["playlist_id", 1], ["artist_id", 9], ["album_id", 3], ["created_at", "2015-04-21 16:40:12.281446"], ["updated_at", "2015-04-21 16:40:12.281446"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "American World"], ["length", 1], ["genre", "Scorzonera"], ["playlist_id", 3], ["artist_id", 6], ["album_id", 1], ["created_at", "2015-04-21 16:40:12.285497"], ["updated_at", "2015-04-21 16:40:12.285497"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Blue Clash"], ["length", 1], ["genre", "Grouse"], ["playlist_id", 1], ["artist_id", 4], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.290106"], ["updated_at", "2015-04-21 16:40:12.290106"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Diaries"], ["length", 1], ["genre", "Pheasant"], ["playlist_id", 6], ["artist_id", 3], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.323395"], ["updated_at", "2015-04-21 16:40:12.323395"]]
+  [1m[35m (168.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Rise of the Danger Beast"], ["length", 1], ["genre", "Beef liver"], ["playlist_id", 9], ["artist_id", 7], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.495277"], ["updated_at", "2015-04-21 16:40:12.495277"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Electric Witch from Mars"], ["length", 1], ["genre", "Cantaloupe"], ["playlist_id", 5], ["artist_id", 2], ["album_id", 5], ["created_at", "2015-04-21 16:40:12.500648"], ["updated_at", "2015-04-21 16:40:12.500648"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Action Tentacle"], ["length", 1], ["genre", "Tangerine"], ["playlist_id", 8], ["artist_id", 6], ["album_id", 7], ["created_at", "2015-04-21 16:40:12.504906"], ["updated_at", "2015-04-21 16:40:12.504906"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Return of the Thief"], ["length", 1], ["genre", "Goat"], ["playlist_id", 5], ["artist_id", 5], ["album_id", 2], ["created_at", "2015-04-21 16:40:12.509479"], ["updated_at", "2015-04-21 16:40:12.509479"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Wizard from Across the Ocean"], ["length", 1], ["genre", "Thai Seasoning"], ["playlist_id", 9], ["artist_id", 4], ["album_id", 3], ["created_at", "2015-04-21 16:40:12.514153"], ["updated_at", "2015-04-21 16:40:12.514153"]]
+  [1m[35m (13.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Christmas on Klocko Pass"], ["length", 1], ["genre", "Mizuna greens"], ["playlist_id", 8], ["artist_id", 1], ["album_id", 4], ["created_at", "2015-04-21 16:40:12.531096"], ["updated_at", "2015-04-21 16:40:12.531096"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "playlist_id" integer, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (14.3ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_albums_on_playlist_id" ON "albums" ("playlist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_albums_on_title" ON "albums" ("title")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "playlist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_artists_on_name" ON "artists" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_name' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX "index_artists_on_playlist_id" ON "artists" ("playlist_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_playlists_on_title" ON "playlists" ("title")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_playlists_on_title' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_playlists_on_title' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "length" integer, "genre" varchar, "playlist_id" integer, "artist_id" integer, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_songs_on_album_id" ON "songs" ("album_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_songs_on_artist_id" ON "songs" ("artist_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_songs_on_playlist_id" ON "songs" ("playlist_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar DEFAULT '' NOT NULL, "password" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "auth_token" varchar DEFAULT '') 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_auth_token" ON "users" ("auth_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_users_on_name" ON "users" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421044923')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416200016')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416200902')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416201020')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416210341')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416210403')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421002416')
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "playlist_id" integer, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_albums_on_playlist_id" ON "albums" ("playlist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_albums_on_title" ON "albums" ("title")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "playlist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_artists_on_name" ON "artists" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_name' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_artists_on_playlist_id" ON "artists" ("playlist_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_playlists_on_title" ON "playlists" ("title")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_playlists_on_title' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_playlists_on_title' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "length" integer, "genre" varchar, "playlist_id" integer, "artist_id" integer, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_songs_on_album_id" ON "songs" ("album_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX "index_songs_on_artist_id" ON "songs" ("artist_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_songs_on_playlist_id" ON "songs" ("playlist_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar DEFAULT '' NOT NULL, "password" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "auth_token" varchar DEFAULT '') 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_auth_token" ON "users" ("auth_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_users_on_name" ON "users" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421044923')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416200016')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416200902')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416201020')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416210341')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416210403')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421002416')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = ? LIMIT 1[0m  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kendra.langworth@koelpin.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "auth_token") VALUES (?, ?, ?, ?)[0m  [["name", "Lavina Sawayn"], ["email", "kendra.langworth@koelpin.info"], ["encrypted_password", "$2a$10$cE8mF.bQFKmNk.r2l2eQ9O/cFbBYu2Kdy/DWD2PiTInDz0MHqbxHW"], ["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Regional Infrastructure Developer"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.630589"], ["updated_at", "2015-04-21 16:42:37.630589"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Human Metrics Manager"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.636548"], ["updated_at", "2015-04-21 16:42:37.636548"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Global Communications Orchestrator"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.639571"], ["updated_at", "2015-04-21 16:42:37.639571"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Dynamic Implementation Facilitator"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.642693"], ["updated_at", "2015-04-21 16:42:37.642693"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Customer Integration Specialist"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.645747"], ["updated_at", "2015-04-21 16:42:37.645747"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Dynamic Branding Representative"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.648700"], ["updated_at", "2015-04-21 16:42:37.648700"]]
+  [1m[36m (16.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "International Accounts Officer"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.667722"], ["updated_at", "2015-04-21 16:42:37.667722"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "International Creative Orchestrator"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.671040"], ["updated_at", "2015-04-21 16:42:37.671040"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Dynamic Identity Specialist"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.674166"], ["updated_at", "2015-04-21 16:42:37.674166"]]
+  [1m[36m (15.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chief Creative Assistant"], ["user_id", 1], ["created_at", "2015-04-21 16:42:37.691383"], ["updated_at", "2015-04-21 16:42:37.691383"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rusty Veum"], ["playlist_id", 5], ["created_at", "2015-04-21 16:42:37.700361"], ["updated_at", "2015-04-21 16:42:37.700361"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marietta Mayer"], ["playlist_id", 6], ["created_at", "2015-04-21 16:42:37.703777"], ["updated_at", "2015-04-21 16:42:37.703777"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cedrick Ebert"], ["playlist_id", 6], ["created_at", "2015-04-21 16:42:37.706997"], ["updated_at", "2015-04-21 16:42:37.706997"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kadin Carroll"], ["playlist_id", 10], ["created_at", "2015-04-21 16:42:37.718124"], ["updated_at", "2015-04-21 16:42:37.718124"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jaiden O'Reilly"], ["playlist_id", 6], ["created_at", "2015-04-21 16:42:37.721415"], ["updated_at", "2015-04-21 16:42:37.721415"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Reva Considine"], ["playlist_id", 5], ["created_at", "2015-04-21 16:42:37.724430"], ["updated_at", "2015-04-21 16:42:37.724430"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carmen Kris"], ["playlist_id", 3], ["created_at", "2015-04-21 16:42:37.727742"], ["updated_at", "2015-04-21 16:42:37.727742"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Julien Lehner"], ["playlist_id", 9], ["created_at", "2015-04-21 16:42:37.731089"], ["updated_at", "2015-04-21 16:42:37.731089"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bonita Jewess"], ["playlist_id", 10], ["created_at", "2015-04-21 16:42:37.734191"], ["updated_at", "2015-04-21 16:42:37.734191"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cassandre Bergnaum"], ["playlist_id", 7], ["created_at", "2015-04-21 16:42:37.737498"], ["updated_at", "2015-04-21 16:42:37.737498"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "teal"], ["playlist_id", 4], ["artist_id", 10], ["created_at", "2015-04-21 16:42:37.746777"], ["updated_at", "2015-04-21 16:42:37.746777"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "black"], ["playlist_id", 9], ["artist_id", 3], ["created_at", "2015-04-21 16:42:37.750421"], ["updated_at", "2015-04-21 16:42:37.750421"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "white"], ["playlist_id", 4], ["artist_id", 3], ["created_at", "2015-04-21 16:42:37.754101"], ["updated_at", "2015-04-21 16:42:37.754101"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "orange"], ["playlist_id", 7], ["artist_id", 9], ["created_at", "2015-04-21 16:42:37.757746"], ["updated_at", "2015-04-21 16:42:37.757746"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "black"], ["playlist_id", 7], ["artist_id", 1], ["created_at", "2015-04-21 16:42:37.761802"], ["updated_at", "2015-04-21 16:42:37.761802"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "brown"], ["playlist_id", 9], ["artist_id", 3], ["created_at", "2015-04-21 16:42:37.765351"], ["updated_at", "2015-04-21 16:42:37.765351"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "blue"], ["playlist_id", 3], ["artist_id", 1], ["created_at", "2015-04-21 16:42:37.768827"], ["updated_at", "2015-04-21 16:42:37.768827"]]
+  [1m[35m (128.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "fuchsia"], ["playlist_id", 8], ["artist_id", 2], ["created_at", "2015-04-21 16:42:37.899897"], ["updated_at", "2015-04-21 16:42:37.899897"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "yellow"], ["playlist_id", 8], ["artist_id", 9], ["created_at", "2015-04-21 16:42:37.903466"], ["updated_at", "2015-04-21 16:42:37.903466"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "blue"], ["playlist_id", 6], ["artist_id", 4], ["created_at", "2015-04-21 16:42:37.906808"], ["updated_at", "2015-04-21 16:42:37.906808"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Dr. Wolves"], ["length", 1], ["genre", "Radish"], ["playlist_id", 7], ["artist_id", 7], ["album_id", 8], ["created_at", "2015-04-21 16:42:37.916051"], ["updated_at", "2015-04-21 16:42:37.916051"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Ultra Dreams"], ["length", 1], ["genre", "Mulberry"], ["playlist_id", 1], ["artist_id", 6], ["album_id", 2], ["created_at", "2015-04-21 16:42:37.920734"], ["updated_at", "2015-04-21 16:42:37.920734"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Day of the Blonde Wolves"], ["length", 1], ["genre", "Jícama"], ["playlist_id", 1], ["artist_id", 3], ["album_id", 3], ["created_at", "2015-04-21 16:42:37.925582"], ["updated_at", "2015-04-21 16:42:37.925582"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Wolf Without a Diaries"], ["length", 1], ["genre", "Yao Choy"], ["playlist_id", 10], ["artist_id", 2], ["album_id", 2], ["created_at", "2015-04-21 16:42:37.936483"], ["updated_at", "2015-04-21 16:42:37.936483"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Demon from Outer Space"], ["length", 1], ["genre", "Brussels sprout"], ["playlist_id", 10], ["artist_id", 4], ["album_id", 4], ["created_at", "2015-04-21 16:42:37.940605"], ["updated_at", "2015-04-21 16:42:37.940605"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Blue Beast from Hell"], ["length", 1], ["genre", "Salad Herbs"], ["playlist_id", 3], ["artist_id", 3], ["album_id", 5], ["created_at", "2015-04-21 16:42:37.945009"], ["updated_at", "2015-04-21 16:42:37.945009"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "2522 A.D."], ["length", 1], ["genre", "Spinach"], ["playlist_id", 10], ["artist_id", 10], ["album_id", 9], ["created_at", "2015-04-21 16:42:37.949596"], ["updated_at", "2015-04-21 16:42:37.949596"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Curse of the Tentacle"], ["length", 1], ["genre", "Courgette flowers"], ["playlist_id", 6], ["artist_id", 6], ["album_id", 7], ["created_at", "2015-04-21 16:42:37.953838"], ["updated_at", "2015-04-21 16:42:37.953838"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Danger Ninjas from Mars"], ["length", 1], ["genre", "Chipolte Pepper"], ["playlist_id", 1], ["artist_id", 8], ["album_id", 5], ["created_at", "2015-04-21 16:42:37.958840"], ["updated_at", "2015-04-21 16:42:37.958840"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "A Fistful of Pickpocket"], ["length", 1], ["genre", "Nopal"], ["playlist_id", 4], ["artist_id", 10], ["album_id", 5], ["created_at", "2015-04-21 16:42:37.963084"], ["updated_at", "2015-04-21 16:42:37.963084"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Fake Wizard"], ["length", 1], ["genre", "Pomegranate"], ["playlist_id", 5], ["artist_id", 6], ["album_id", 6], ["created_at", "2015-04-21 16:42:37.967087"], ["updated_at", "2015-04-21 16:42:37.967087"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Forbidden Blow"], ["length", 1], ["genre", "Rabbit"], ["playlist_id", 5], ["artist_id", 8], ["album_id", 4], ["created_at", "2015-04-21 16:42:37.971239"], ["updated_at", "2015-04-21 16:42:37.971239"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Time of the Wolves"], ["length", 1], ["genre", "Venison"], ["playlist_id", 1], ["artist_id", 10], ["album_id", 10], ["created_at", "2015-04-21 16:42:37.975234"], ["updated_at", "2015-04-21 16:42:37.975234"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Champagne Witch"], ["length", 1], ["genre", "Ensete"], ["playlist_id", 7], ["artist_id", 4], ["album_id", 3], ["created_at", "2015-04-21 16:42:37.980032"], ["updated_at", "2015-04-21 16:42:37.980032"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Tokyo Witch from Outer Space"], ["length", 1], ["genre", "Garlic"], ["playlist_id", 8], ["artist_id", 4], ["album_id", 7], ["created_at", "2015-04-21 16:42:37.984685"], ["updated_at", "2015-04-21 16:42:37.984685"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Fly from Outer Space"], ["length", 1], ["genre", "Cherimoya"], ["playlist_id", 6], ["artist_id", 10], ["album_id", 4], ["created_at", "2015-04-21 16:42:37.988619"], ["updated_at", "2015-04-21 16:42:37.988619"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Wizard 2: Electric Boogaloo"], ["length", 1], ["genre", "Ginger"], ["playlist_id", 1], ["artist_id", 8], ["album_id", 1], ["created_at", "2015-04-21 16:42:37.992650"], ["updated_at", "2015-04-21 16:42:37.992650"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Hard Boiled Wizard"], ["length", 1], ["genre", "Breadfruit"], ["playlist_id", 9], ["artist_id", 1], ["album_id", 9], ["created_at", "2015-04-21 16:42:37.997152"], ["updated_at", "2015-04-21 16:42:37.997152"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Journey of the Hills"], ["length", 1], ["genre", "Turmeric"], ["playlist_id", 7], ["artist_id", 9], ["album_id", 1], ["created_at", "2015-04-21 16:42:38.001647"], ["updated_at", "2015-04-21 16:42:38.001647"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Tokyo Ninja: The Ardith Jaskolski Story"], ["length", 1], ["genre", "Cucumber"], ["playlist_id", 10], ["artist_id", 10], ["album_id", 5], ["created_at", "2015-04-21 16:42:38.005777"], ["updated_at", "2015-04-21 16:42:38.005777"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Green Fly"], ["length", 1], ["genre", "Persimmon"], ["playlist_id", 5], ["artist_id", 4], ["album_id", 2], ["created_at", "2015-04-21 16:42:38.009859"], ["updated_at", "2015-04-21 16:42:38.009859"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "I am Identity"], ["length", 1], ["genre", "Celery"], ["playlist_id", 10], ["artist_id", 8], ["album_id", 1], ["created_at", "2015-04-21 16:42:38.014686"], ["updated_at", "2015-04-21 16:42:38.014686"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Forbidden Thief"], ["length", 1], ["genre", "Coriander"], ["playlist_id", 6], ["artist_id", 9], ["album_id", 8], ["created_at", "2015-04-21 16:42:38.018696"], ["updated_at", "2015-04-21 16:42:38.018696"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Forbidden Gypsy"], ["length", 1], ["genre", "Cinnamon"], ["playlist_id", 6], ["artist_id", 8], ["album_id", 10], ["created_at", "2015-04-21 16:42:38.022560"], ["updated_at", "2015-04-21 16:42:38.022560"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Fly from 1356 Leagues"], ["length", 1], ["genre", "Fiddlehead"], ["playlist_id", 3], ["artist_id", 10], ["album_id", 7], ["created_at", "2015-04-21 16:42:38.026507"], ["updated_at", "2015-04-21 16:42:38.026507"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Death Fly from Outer Space"], ["length", 1], ["genre", "Amaranth"], ["playlist_id", 3], ["artist_id", 8], ["album_id", 7], ["created_at", "2015-04-21 16:42:38.030798"], ["updated_at", "2015-04-21 16:42:38.030798"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Planet of the Women"], ["length", 1], ["genre", "Cantaloupe"], ["playlist_id", 3], ["artist_id", 3], ["album_id", 2], ["created_at", "2015-04-21 16:42:38.034642"], ["updated_at", "2015-04-21 16:42:38.034642"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "I am American Clash"], ["length", 1], ["genre", "Pea"], ["playlist_id", 6], ["artist_id", 7], ["album_id", 8], ["created_at", "2015-04-21 16:42:38.039489"], ["updated_at", "2015-04-21 16:42:38.039489"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Bloody Monster from Mars"], ["length", 1], ["genre", "Blackberry"], ["playlist_id", 7], ["artist_id", 9], ["album_id", 10], ["created_at", "2015-04-21 16:42:38.043802"], ["updated_at", "2015-04-21 16:42:38.043802"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Case of the Missing Ultra Cat"], ["length", 1], ["genre", "Beef tongue"], ["playlist_id", 6], ["artist_id", 2], ["album_id", 6], ["created_at", "2015-04-21 16:42:38.049473"], ["updated_at", "2015-04-21 16:42:38.049473"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Invasion of the Dangerous Men"], ["length", 1], ["genre", "Opossum"], ["playlist_id", 3], ["artist_id", 6], ["album_id", 9], ["created_at", "2015-04-21 16:42:38.053553"], ["updated_at", "2015-04-21 16:42:38.053553"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Hungry Man"], ["length", 1], ["genre", "Prairie turnip"], ["playlist_id", 6], ["artist_id", 6], ["album_id", 1], ["created_at", "2015-04-21 16:42:38.058444"], ["updated_at", "2015-04-21 16:42:38.058444"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "When Trudie Met Evan"], ["length", 1], ["genre", "Yao Choy"], ["playlist_id", 4], ["artist_id", 4], ["album_id", 7], ["created_at", "2015-04-21 16:42:38.062688"], ["updated_at", "2015-04-21 16:42:38.062688"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Forbidden World from Across the Ocean"], ["length", 1], ["genre", "Bitter melon/Bitter gourd"], ["playlist_id", 1], ["artist_id", 2], ["album_id", 6], ["created_at", "2015-04-21 16:42:38.067419"], ["updated_at", "2015-04-21 16:42:38.067419"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Green Fly"], ["length", 1], ["genre", "Rock melon"], ["playlist_id", 8], ["artist_id", 4], ["album_id", 9], ["created_at", "2015-04-21 16:42:38.100898"], ["updated_at", "2015-04-21 16:42:38.100898"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Killer Diaries"], ["length", 1], ["genre", "Yarrow"], ["playlist_id", 5], ["artist_id", 4], ["album_id", 3], ["created_at", "2015-04-21 16:42:38.105155"], ["updated_at", "2015-04-21 16:42:38.105155"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Green Wolf: The Gertrude Christiansen V Story"], ["length", 1], ["genre", "Buffalo, Bison"], ["playlist_id", 10], ["artist_id", 6], ["album_id", 8], ["created_at", "2015-04-21 16:42:38.109654"], ["updated_at", "2015-04-21 16:42:38.109654"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Hard Boiled Cat"], ["length", 1], ["genre", "American groundnut"], ["playlist_id", 2], ["artist_id", 3], ["album_id", 8], ["created_at", "2015-04-21 16:42:38.114187"], ["updated_at", "2015-04-21 16:42:38.114187"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "War of the Dreams"], ["length", 1], ["genre", "Turkey"], ["playlist_id", 3], ["artist_id", 5], ["album_id", 1], ["created_at", "2015-04-21 16:42:38.118680"], ["updated_at", "2015-04-21 16:42:38.118680"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Forbidden Diaries from Hell"], ["length", 1], ["genre", "Beef liver"], ["playlist_id", 7], ["artist_id", 6], ["album_id", 6], ["created_at", "2015-04-21 16:42:38.123012"], ["updated_at", "2015-04-21 16:42:38.123012"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Case of the Missing American Ninjas"], ["length", 1], ["genre", "Sea kale"], ["playlist_id", 8], ["artist_id", 4], ["album_id", 5], ["created_at", "2015-04-21 16:42:38.127924"], ["updated_at", "2015-04-21 16:42:38.127924"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Men from Across the Ocean"], ["length", 1], ["genre", "Organs"], ["playlist_id", 9], ["artist_id", 5], ["album_id", 2], ["created_at", "2015-04-21 16:42:38.132435"], ["updated_at", "2015-04-21 16:42:38.132435"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Blue Identity"], ["length", 1], ["genre", "Date"], ["playlist_id", 2], ["artist_id", 1], ["album_id", 3], ["created_at", "2015-04-21 16:42:38.136775"], ["updated_at", "2015-04-21 16:42:38.136775"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Dreams 2: Electric Boogaloo"], ["length", 1], ["genre", "Water chestnut"], ["playlist_id", 10], ["artist_id", 7], ["album_id", 9], ["created_at", "2015-04-21 16:42:38.140687"], ["updated_at", "2015-04-21 16:42:38.140687"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Day of the Hills"], ["length", 1], ["genre", "Lemon"], ["playlist_id", 7], ["artist_id", 6], ["album_id", 5], ["created_at", "2015-04-21 16:42:38.144850"], ["updated_at", "2015-04-21 16:42:38.144850"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Time of the Electric Identity"], ["length", 1], ["genre", "Samphire"], ["playlist_id", 8], ["artist_id", 1], ["album_id", 6], ["created_at", "2015-04-21 16:42:38.149550"], ["updated_at", "2015-04-21 16:42:38.149550"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Season of the Champagne Wolves"], ["length", 1], ["genre", "Sage"], ["playlist_id", 5], ["artist_id", 5], ["album_id", 2], ["created_at", "2015-04-21 16:42:38.153490"], ["updated_at", "2015-04-21 16:42:38.153490"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "The Nuclear Mutant with a Thousand Faces"], ["length", 1], ["genre", "Chinese artichoke"], ["playlist_id", 2], ["artist_id", 3], ["album_id", 1], ["created_at", "2015-04-21 16:42:38.157969"], ["updated_at", "2015-04-21 16:42:38.157969"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Blow 2: Electric Boogaloo"], ["length", 1], ["genre", "Pork, Bacon"], ["playlist_id", 5], ["artist_id", 1], ["album_id", 6], ["created_at", "2015-04-21 16:42:38.162218"], ["updated_at", "2015-04-21 16:42:38.162218"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Flying Monster"], ["length", 1], ["genre", "Azuki bean"], ["playlist_id", 6], ["artist_id", 9], ["album_id", 2], ["created_at", "2015-04-21 16:42:38.166209"], ["updated_at", "2015-04-21 16:42:38.166209"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "playlist_id" integer, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_albums_on_playlist_id" ON "albums" ("playlist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_albums_on_title" ON "albums" ("title")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "playlist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX "index_artists_on_name" ON "artists" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_name' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_artists_on_playlist_id" ON "artists" ("playlist_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_playlists_on_title" ON "playlists" ("title")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_playlists_on_title' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_playlists_on_title' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "length" integer, "genre" varchar, "playlist_id" integer, "artist_id" integer, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_songs_on_album_id" ON "songs" ("album_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_songs_on_artist_id" ON "songs" ("artist_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_songs_on_playlist_id" ON "songs" ("playlist_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar DEFAULT '' NOT NULL, "password" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "auth_token" varchar DEFAULT '') 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_auth_token" ON "users" ("auth_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX "index_users_on_name" ON "users" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421044923')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416200016')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416200902')
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416201020')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416210341')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416210403')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421002416')
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "playlist_id" integer, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_albums_on_playlist_id" ON "albums" ("playlist_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_playlist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_albums_on_title" ON "albums" ("title")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "playlist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_artists_on_name" ON "artists" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_name' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_artists_on_playlist_id" ON "artists" ("playlist_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "playlists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_playlists_on_title" ON "playlists" ("title")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_playlists_on_title' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_playlists_on_title' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_playlists_on_user_id" ON "playlists" ("user_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "length" integer, "genre" varchar, "playlist_id" integer, "artist_id" integer, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_songs_on_album_id" ON "songs" ("album_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_songs_on_artist_id" ON "songs" ("artist_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_songs_on_playlist_id" ON "songs" ("playlist_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar DEFAULT '' NOT NULL, "password" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "auth_token" varchar DEFAULT '') 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_auth_token" ON "users" ("auth_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX "index_users_on_name" ON "users" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_auth_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421044923')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416200016')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416200902')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416201020')[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150416210341')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150416210403')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150421002416')
+
+
+Started GET "/users/1/playlists/1/songs.json" for ::1 at 2015-04-21 14:17:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::SongsController#index as JSON
+  Parameters: {"user_id"=>"1", "playlist_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+  [1m[36mSong Load (16.5ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+Completed 200 OK in 84ms (Views: 12.3ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/users/1/playlists/1/songs.json" for ::1 at 2015-04-21 14:17:34 -0700
+Processing by Api::V1::SongsController#create as JSON
+  Parameters: {"user_id"=>"1", "playlist_id"=>"1"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-21 21:17:34.412391"], ["updated_at", "2015-04-21 21:17:34.412391"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 4.5ms)
+
+NoMethodError (undefined method `api_song_url' for #<Api::V1::SongsController:0x007f8dcb5216c8>):
+  app/controllers/api/v1/songs_controller.rb:19:in `create'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.6ms)
+
+
+Started GET "/users/1/playlists/1/songs.json" for ::1 at 2015-04-21 15:03:47 -0700
+Processing by Api::V1::SongsController#index as JSON
+  Parameters: {"user_id"=>"1", "playlist_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)

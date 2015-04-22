@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails playlist_rails: development" uuid="dbceb111-9e80-446c-9b27-400e34d935aa">
-      <first-sync>true</first-sync>
-    </data-source>
-    <data-source name="Rails playlist_rails: test" uuid="9f5600eb-f8ed-4099-a7da-58a52cbf4b72">
-      <first-sync>true</first-sync>
-    </data-source>
+    <data-source name="Rails playlist_rails: development" uuid="dbceb111-9e80-446c-9b27-400e34d935aa" />
+    <data-source name="Rails playlist_rails: test" uuid="9f5600eb-f8ed-4099-a7da-58a52cbf4b72" />
   </component>
 </project>

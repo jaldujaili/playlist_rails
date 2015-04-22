@@ -21,4 +21,3 @@ module Request
     end
   end
 end
-end
