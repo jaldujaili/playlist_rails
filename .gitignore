@@ -1,1 +1,7 @@
 .idea
+log
+tmp
+.DS_Store
+*.sqlite3
+public/assets/
+config/database.yml
