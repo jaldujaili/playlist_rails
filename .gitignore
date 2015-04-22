@@ -1,7 +1,14 @@
-.idea
-log
+.idea/
+log/
 tmp
 .DS_Store
 *.sqlite3
 public/assets/
 config/database.yml
+log/test.log
+
+.idea/workspace.xml
+
+.idea/playlist_rails.iml
+
+db/test.sqlite3

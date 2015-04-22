@@ -27,21 +27,20 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    @user = user.find(params[:id])
+    @user = current_user
 
-    if @user.update_attribute(user_params)
+    if @user.update_attributes(user_params)
       render json: @user, status: 200, location: [:api, @user]
+    else
+      render json: {user: { errors: @user.errors }}.to_json, status: 422
+      end
     end
-  else
-    render json: {user: { errors: @user.errors }}.to_json, status: 422
-  end
 
 
-  def destroy
-    @user = user.find(params[:id])
-    @user.destroy
-    head 204
-  end
+  # def destroy
+  #   current_user.destroy
+  #   head 204
+  # end
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
