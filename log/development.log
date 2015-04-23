@@ -12583,3 +12583,734 @@ Processing by Api::V1::SongsController#index as JSON
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
   [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
 Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:21:34 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.1ms)
+
+NoMethodError (undefined method `playlist' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (33.3ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:21:59 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `playlist' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.5ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:22:14 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "wCf6hAcjijTsUiupRTjA"]]
+  [1m[35mPlaylist Load (0.7ms)[0m  SELECT "playlists".* FROM "playlists"
+Completed 200 OK in 62ms (Views: 5.8ms | ActiveRecord: 1.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."auth_token" = ? LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[36mUser Exists (17.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ricardo@gorczanymoen.name' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("name", "email", "encrypted_password", "auth_token") VALUES (?, ?, ?, ?)  [["name", "Jermey Trantow"], ["email", "ricardo@gorczanymoen.name"], ["encrypted_password", "$2a$10$oLDxdEHrt0.d41Dnv6lAjeBmwPuIXgV5UD1OE3TyNYudL1joLR1le"], ["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (15.4ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Senior Security Supervisor"], ["user_id", 1], ["created_at", "2015-04-22 17:28:03.625071"], ["updated_at", "2015-04-22 17:28:03.625071"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lead Operations Representative"], ["user_id", 2], ["created_at", "2015-04-22 17:28:03.639514"], ["updated_at", "2015-04-22 17:28:03.639514"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Direct Factors Associate"], ["user_id", 1], ["created_at", "2015-04-22 17:28:03.643074"], ["updated_at", "2015-04-22 17:28:03.643074"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Global Quality Planner"], ["user_id", 1], ["created_at", "2015-04-22 17:28:03.646345"], ["updated_at", "2015-04-22 17:28:03.646345"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "National Paradigm Executive"], ["user_id", 1], ["created_at", "2015-04-22 17:28:03.650515"], ["updated_at", "2015-04-22 17:28:03.650515"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Future Directives Director"], ["user_id", 2], ["created_at", "2015-04-22 17:28:03.653907"], ["updated_at", "2015-04-22 17:28:03.653907"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "District Applications Orchestrator"], ["user_id", 1], ["created_at", "2015-04-22 17:28:03.657332"], ["updated_at", "2015-04-22 17:28:03.657332"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Direct Mobility Officer"], ["user_id", 2], ["created_at", "2015-04-22 17:28:03.660580"], ["updated_at", "2015-04-22 17:28:03.660580"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Investor Directives Coordinator"], ["user_id", 2], ["created_at", "2015-04-22 17:28:03.663535"], ["updated_at", "2015-04-22 17:28:03.663535"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "playlists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Forward Infrastructure Manager"], ["user_id", 2], ["created_at", "2015-04-22 17:28:03.666507"], ["updated_at", "2015-04-22 17:28:03.666507"]]
+  [1m[35m (25.0ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sienna Casper"], ["playlist_id", 2], ["created_at", "2015-04-22 17:28:03.773007"], ["updated_at", "2015-04-22 17:28:03.773007"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dr. Lonzo Prosacco"], ["playlist_id", 18], ["created_at", "2015-04-22 17:28:03.776852"], ["updated_at", "2015-04-22 17:28:03.776852"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Scottie Aufderhar"], ["playlist_id", 2], ["created_at", "2015-04-22 17:28:03.780439"], ["updated_at", "2015-04-22 17:28:03.780439"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Kale Kerluke"], ["playlist_id", 3], ["created_at", "2015-04-22 17:28:03.783827"], ["updated_at", "2015-04-22 17:28:03.783827"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sebastian Wiza"], ["playlist_id", 19], ["created_at", "2015-04-22 17:28:03.787255"], ["updated_at", "2015-04-22 17:28:03.787255"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cheyenne Krajcik"], ["playlist_id", 6], ["created_at", "2015-04-22 17:28:03.791712"], ["updated_at", "2015-04-22 17:28:03.791712"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Ms. Nicolas Hessel"], ["playlist_id", 18], ["created_at", "2015-04-22 17:28:03.795113"], ["updated_at", "2015-04-22 17:28:03.795113"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mr. Alan Toy"], ["playlist_id", 19], ["created_at", "2015-04-22 17:28:03.798433"], ["updated_at", "2015-04-22 17:28:03.798433"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Olga Bernhard"], ["playlist_id", 5], ["created_at", "2015-04-22 17:28:03.801699"], ["updated_at", "2015-04-22 17:28:03.801699"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "playlist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mrs. Milan West"], ["playlist_id", 2], ["created_at", "2015-04-22 17:28:03.805205"], ["updated_at", "2015-04-22 17:28:03.805205"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (45.8ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "silver"], ["playlist_id", 7], ["artist_id", 8], ["created_at", "2015-04-22 17:28:03.851415"], ["updated_at", "2015-04-22 17:28:03.851415"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "black"], ["playlist_id", 11], ["artist_id", 15], ["created_at", "2015-04-22 17:28:03.900919"], ["updated_at", "2015-04-22 17:28:03.900919"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "yellow"], ["playlist_id", 14], ["artist_id", 14], ["created_at", "2015-04-22 17:28:03.911812"], ["updated_at", "2015-04-22 17:28:03.911812"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "olive"], ["playlist_id", 6], ["artist_id", 3], ["created_at", "2015-04-22 17:28:03.915620"], ["updated_at", "2015-04-22 17:28:03.915620"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "yellow"], ["playlist_id", 17], ["artist_id", 9], ["created_at", "2015-04-22 17:28:03.919696"], ["updated_at", "2015-04-22 17:28:03.919696"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "purple"], ["playlist_id", 19], ["artist_id", 5], ["created_at", "2015-04-22 17:28:03.923338"], ["updated_at", "2015-04-22 17:28:03.923338"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "blue"], ["playlist_id", 18], ["artist_id", 19], ["created_at", "2015-04-22 17:28:03.926926"], ["updated_at", "2015-04-22 17:28:03.926926"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fuchsia"], ["playlist_id", 12], ["artist_id", 9], ["created_at", "2015-04-22 17:28:03.930755"], ["updated_at", "2015-04-22 17:28:03.930755"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "purple"], ["playlist_id", 15], ["artist_id", 7], ["created_at", "2015-04-22 17:28:03.934485"], ["updated_at", "2015-04-22 17:28:03.934485"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "playlists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "playlist_id", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "purple"], ["playlist_id", 8], ["artist_id", 11], ["created_at", "2015-04-22 17:28:03.938201"], ["updated_at", "2015-04-22 17:28:03.938201"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (11.8ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Brain"], ["length", 1], ["genre", "Cornish Game Hen"], ["playlist_id", 13], ["artist_id", 8], ["album_id", 14], ["created_at", "2015-04-22 17:28:03.958832"], ["updated_at", "2015-04-22 17:28:03.958832"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Cousins from Across the Ocean"], ["length", 1], ["genre", "Saffron"], ["playlist_id", 3], ["artist_id", 17], ["album_id", 3], ["created_at", "2015-04-22 17:28:03.975556"], ["updated_at", "2015-04-22 17:28:03.975556"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Electric Dreams Who Fell to Earth"], ["length", 1], ["genre", "Hickory Salt"], ["playlist_id", 18], ["artist_id", 16], ["album_id", 20], ["created_at", "2015-04-22 17:28:03.980416"], ["updated_at", "2015-04-22 17:28:03.980416"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Dangerous Rain That Came to Dinner"], ["length", 1], ["genre", "Breadfruit"], ["playlist_id", 5], ["artist_id", 17], ["album_id", 11], ["created_at", "2015-04-22 17:28:03.984759"], ["updated_at", "2015-04-22 17:28:03.984759"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Nuclear Witch"], ["length", 1], ["genre", "Tomato"], ["playlist_id", 7], ["artist_id", 9], ["album_id", 10], ["created_at", "2015-04-22 17:28:03.989579"], ["updated_at", "2015-04-22 17:28:03.989579"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Nuclear Men from the Black Lagoon"], ["length", 1], ["genre", "Turnip"], ["playlist_id", 1], ["artist_id", 12], ["album_id", 1], ["created_at", "2015-04-22 17:28:03.994419"], ["updated_at", "2015-04-22 17:28:03.994419"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Wolves from Hell"], ["length", 1], ["genre", "Cumin"], ["playlist_id", 11], ["artist_id", 13], ["album_id", 1], ["created_at", "2015-04-22 17:28:03.998795"], ["updated_at", "2015-04-22 17:28:03.998795"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Action Women"], ["length", 1], ["genre", "Honeydew"], ["playlist_id", 10], ["artist_id", 1], ["album_id", 2], ["created_at", "2015-04-22 17:28:04.003368"], ["updated_at", "2015-04-22 17:28:04.003368"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ultra Dreams 2: Son of Ultra Dreams"], ["length", 1], ["genre", "Guava"], ["playlist_id", 4], ["artist_id", 14], ["album_id", 4], ["created_at", "2015-04-22 17:28:04.007359"], ["updated_at", "2015-04-22 17:28:04.007359"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "I am Ninjas"], ["length", 1], ["genre", "Gizzards"], ["playlist_id", 9], ["artist_id", 15], ["album_id", 6], ["created_at", "2015-04-22 17:28:04.013727"], ["updated_at", "2015-04-22 17:28:04.013727"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Diaries"], ["length", 1], ["genre", "Goose"], ["playlist_id", 18], ["artist_id", 12], ["album_id", 20], ["created_at", "2015-04-22 17:28:04.018506"], ["updated_at", "2015-04-22 17:28:04.018506"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Bloody Man"], ["length", 1], ["genre", "Horseradish"], ["playlist_id", 13], ["artist_id", 4], ["album_id", 4], ["created_at", "2015-04-22 17:28:04.022987"], ["updated_at", "2015-04-22 17:28:04.022987"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Friday from North Norridge"], ["length", 1], ["genre", "Duck Liver"], ["playlist_id", 16], ["artist_id", 6], ["album_id", 6], ["created_at", "2015-04-22 17:28:04.050958"], ["updated_at", "2015-04-22 17:28:04.050958"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Fake Monster from Outer Space"], ["length", 1], ["genre", "Bamboo shoot"], ["playlist_id", 10], ["artist_id", 5], ["album_id", 14], ["created_at", "2015-04-22 17:28:04.055587"], ["updated_at", "2015-04-22 17:28:04.055587"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Electric Clash"], ["length", 1], ["genre", "Vanilla Bean"], ["playlist_id", 11], ["artist_id", 2], ["album_id", 13], ["created_at", "2015-04-22 17:28:04.059675"], ["updated_at", "2015-04-22 17:28:04.059675"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Cousins"], ["length", 1], ["genre", "Cilantro"], ["playlist_id", 12], ["artist_id", 3], ["album_id", 17], ["created_at", "2015-04-22 17:28:04.064215"], ["updated_at", "2015-04-22 17:28:04.064215"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ninja 2: Electric Boogaloo"], ["length", 1], ["genre", "Boysenberry"], ["playlist_id", 7], ["artist_id", 8], ["album_id", 15], ["created_at", "2015-04-22 17:28:04.068635"], ["updated_at", "2015-04-22 17:28:04.068635"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Codename: Diaries"], ["length", 1], ["genre", "Salad Herbs"], ["playlist_id", 1], ["artist_id", 19], ["album_id", 7], ["created_at", "2015-04-22 17:28:04.074320"], ["updated_at", "2015-04-22 17:28:04.074320"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Forbidden Cat"], ["length", 1], ["genre", "Arrowroot"], ["playlist_id", 16], ["artist_id", 1], ["album_id", 7], ["created_at", "2015-04-22 17:28:04.078799"], ["updated_at", "2015-04-22 17:28:04.078799"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Curse of the Blue Men"], ["length", 1], ["genre", "Partridge"], ["playlist_id", 14], ["artist_id", 10], ["album_id", 2], ["created_at", "2015-04-22 17:28:04.083024"], ["updated_at", "2015-04-22 17:28:04.083024"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Curse of the Ultra Diaries"], ["length", 1], ["genre", "Moth bean"], ["playlist_id", 12], ["artist_id", 18], ["album_id", 5], ["created_at", "2015-04-22 17:28:04.087449"], ["updated_at", "2015-04-22 17:28:04.087449"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Flying Cousins"], ["length", 1], ["genre", "Chicken"], ["playlist_id", 19], ["artist_id", 14], ["album_id", 3], ["created_at", "2015-04-22 17:28:04.092369"], ["updated_at", "2015-04-22 17:28:04.092369"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Blue Tentacle: The Vidal Beahan Sr. Story"], ["length", 1], ["genre", "Cassava"], ["playlist_id", 14], ["artist_id", 13], ["album_id", 7], ["created_at", "2015-04-22 17:28:04.097956"], ["updated_at", "2015-04-22 17:28:04.097956"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Return of the Friday"], ["length", 1], ["genre", "Lamb's Quarters"], ["playlist_id", 5], ["artist_id", 4], ["album_id", 20], ["created_at", "2015-04-22 17:28:04.102647"], ["updated_at", "2015-04-22 17:28:04.102647"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ultra Tentacle"], ["length", 1], ["genre", "Vanilla Bean"], ["playlist_id", 20], ["artist_id", 14], ["album_id", 1], ["created_at", "2015-04-22 17:28:04.107016"], ["updated_at", "2015-04-22 17:28:04.107016"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Killer Rain"], ["length", 1], ["genre", "Collard greens"], ["playlist_id", 2], ["artist_id", 2], ["album_id", 9], ["created_at", "2015-04-22 17:28:04.110935"], ["updated_at", "2015-04-22 17:28:04.110935"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Danger Gypsy"], ["length", 1], ["genre", "Duck"], ["playlist_id", 20], ["artist_id", 6], ["album_id", 9], ["created_at", "2015-04-22 17:28:04.116009"], ["updated_at", "2015-04-22 17:28:04.116009"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Death Hills"], ["length", 1], ["genre", "Lagos bologi"], ["playlist_id", 1], ["artist_id", 3], ["album_id", 3], ["created_at", "2015-04-22 17:28:04.120108"], ["updated_at", "2015-04-22 17:28:04.120108"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Tokyo Thief"], ["length", 1], ["genre", "Guava"], ["playlist_id", 13], ["artist_id", 15], ["album_id", 7], ["created_at", "2015-04-22 17:28:04.124957"], ["updated_at", "2015-04-22 17:28:04.124957"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Flying Friday"], ["length", 1], ["genre", "Miracle fruit"], ["playlist_id", 17], ["artist_id", 16], ["album_id", 20], ["created_at", "2015-04-22 17:28:04.129627"], ["updated_at", "2015-04-22 17:28:04.129627"]]
+  [1m[35m (30.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Day of the Man"], ["length", 1], ["genre", "Azuki bean"], ["playlist_id", 7], ["artist_id", 14], ["album_id", 10], ["created_at", "2015-04-22 17:28:04.163475"], ["updated_at", "2015-04-22 17:28:04.163475"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Champagne Identity: The Weston Parker Story"], ["length", 1], ["genre", "Goat"], ["playlist_id", 5], ["artist_id", 6], ["album_id", 17], ["created_at", "2015-04-22 17:28:04.167565"], ["updated_at", "2015-04-22 17:28:04.167565"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Killer Diaries Who Fell to Earth"], ["length", 1], ["genre", "Pork, Bacon"], ["playlist_id", 11], ["artist_id", 9], ["album_id", 15], ["created_at", "2015-04-22 17:28:04.171669"], ["updated_at", "2015-04-22 17:28:04.171669"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Forbidden Brain"], ["length", 1], ["genre", "Beef heart"], ["playlist_id", 5], ["artist_id", 1], ["album_id", 11], ["created_at", "2015-04-22 17:28:04.176020"], ["updated_at", "2015-04-22 17:28:04.176020"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hard Boiled Gypsy"], ["length", 1], ["genre", "Chickweed"], ["playlist_id", 12], ["artist_id", 4], ["album_id", 10], ["created_at", "2015-04-22 17:28:04.180311"], ["updated_at", "2015-04-22 17:28:04.180311"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "I am Forbidden Ninjas"], ["length", 1], ["genre", "Peanut"], ["playlist_id", 13], ["artist_id", 14], ["album_id", 1], ["created_at", "2015-04-22 17:28:04.185018"], ["updated_at", "2015-04-22 17:28:04.185018"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Action Women: The Elliot Wisozk Story"], ["length", 1], ["genre", "Lemon Pepper"], ["playlist_id", 19], ["artist_id", 10], ["album_id", 13], ["created_at", "2015-04-22 17:28:04.189030"], ["updated_at", "2015-04-22 17:28:04.189030"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Ultra Clash from Mars"], ["length", 1], ["genre", "Blueberry"], ["playlist_id", 6], ["artist_id", 3], ["album_id", 18], ["created_at", "2015-04-22 17:28:04.193401"], ["updated_at", "2015-04-22 17:28:04.193401"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Men 2: Electric Boogaloo"], ["length", 1], ["genre", "Guava"], ["playlist_id", 19], ["artist_id", 14], ["album_id", 3], ["created_at", "2015-04-22 17:28:04.198428"], ["updated_at", "2015-04-22 17:28:04.198428"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Flying Gypsy"], ["length", 1], ["genre", "Olive"], ["playlist_id", 12], ["artist_id", 2], ["album_id", 8], ["created_at", "2015-04-22 17:28:04.202762"], ["updated_at", "2015-04-22 17:28:04.202762"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Dr. Cat"], ["length", 1], ["genre", "Pumpkin Pie Spice"], ["playlist_id", 17], ["artist_id", 15], ["album_id", 6], ["created_at", "2015-04-22 17:28:04.206749"], ["updated_at", "2015-04-22 17:28:04.206749"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "War of the Gypsy"], ["length", 1], ["genre", "Oregano"], ["playlist_id", 18], ["artist_id", 17], ["album_id", 14], ["created_at", "2015-04-22 17:28:04.211018"], ["updated_at", "2015-04-22 17:28:04.211018"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Red World"], ["length", 1], ["genre", "Mace"], ["playlist_id", 13], ["artist_id", 1], ["album_id", 1], ["created_at", "2015-04-22 17:28:04.216180"], ["updated_at", "2015-04-22 17:28:04.216180"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Bloody Cousins That Came to Dinner"], ["length", 1], ["genre", "Agar agar"], ["playlist_id", 19], ["artist_id", 10], ["album_id", 11], ["created_at", "2015-04-22 17:28:04.249692"], ["updated_at", "2015-04-22 17:28:04.249692"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Flying Clash"], ["length", 1], ["genre", "Bone soup from allowable meats"], ["playlist_id", 14], ["artist_id", 3], ["album_id", 5], ["created_at", "2015-04-22 17:28:04.253570"], ["updated_at", "2015-04-22 17:28:04.253570"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Ultra Pickpocket with a Thousand Faces"], ["length", 1], ["genre", "Bay Leaf"], ["playlist_id", 3], ["artist_id", 20], ["album_id", 5], ["created_at", "2015-04-22 17:28:04.258037"], ["updated_at", "2015-04-22 17:28:04.258037"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Blue Pickpocket from Outer Space"], ["length", 1], ["genre", "Bartlett pear"], ["playlist_id", 11], ["artist_id", 20], ["album_id", 4], ["created_at", "2015-04-22 17:28:04.262557"], ["updated_at", "2015-04-22 17:28:04.262557"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Fake Men"], ["length", 1], ["genre", "Bar-B-Que Spice"], ["playlist_id", 17], ["artist_id", 10], ["album_id", 6], ["created_at", "2015-04-22 17:28:04.266690"], ["updated_at", "2015-04-22 17:28:04.266690"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hungry Witch"], ["length", 1], ["genre", "Sweet pepper"], ["playlist_id", 15], ["artist_id", 1], ["album_id", 15], ["created_at", "2015-04-22 17:28:04.271119"], ["updated_at", "2015-04-22 17:28:04.271119"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "playlists"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("title", "length", "genre", "playlist_id", "artist_id", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Tokyo Wolves"], ["length", 1], ["genre", "Cardamom"], ["playlist_id", 4], ["artist_id", 6], ["album_id", 1], ["created_at", "2015-04-22 17:28:04.275378"], ["updated_at", "2015-04-22 17:28:04.275378"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:28:45 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT "playlists".* FROM "playlists"
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/playlists.json" for ::1 at 2015-04-22 10:29:06 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[35mPlaylist Load (0.1ms)[0m  SELECT "playlists".* FROM "playlists"
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:29:17 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[35mPlaylist Load (0.1ms)[0m  SELECT "playlists".* FROM "playlists"
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:29:44 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[35mPlaylist Load (0.2ms)[0m  SELECT "playlists".* FROM "playlists"
+Completed 200 OK in 21ms (Views: 7.4ms | ActiveRecord: 0.9ms)
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists"[0m
+  [1m[35mPlaylist Load (0.3ms)[0m  SELECT  "playlists".* FROM "playlists"  ORDER BY "playlists"."id" DESC LIMIT 1
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:31:05 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `playlist' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:32:56 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `playlists' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.1ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:35:46 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `current_user_playlists' for #<Api::V1::PlaylistsController:0x007f8dd0642b60>):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:36:42 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `current_user_playlists' for #<Api::V1::PlaylistsController:0x007f8dcbe79dd8>):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.1ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.3ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:36:58 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `current_user_playlists' for #<Api::V1::PlaylistsController:0x007f8dd2bba348>):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.4ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:39:30 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+  [1m[36mPlaylist Load (0.2ms)[0m  [1mSELECT "playlists".* FROM "playlists"[0m
+Completed 200 OK in 38ms (Views: 7.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/playlists.json" for ::1 at 2015-04-22 10:39:59 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `playlists' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/users/2/playlists.json" for ::1 at 2015-04-22 10:40:10 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `playlists' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.9ms)
+
+
+Started GET "/users/2/playlists.json" for ::1 at 2015-04-22 10:51:18 -0700
+Processing by Api::V1::PlaylistsController#index as JSON
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."auth_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["auth_token", "YHAbG_yVBR8WusbBXyvF"]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `playlists' for nil:NilClass):
+  app/controllers/api/v1/playlists_controller.rb:8:in `index'
+
+
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jordan/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.7ms)

@@ -250,6 +250,7 @@ DEPENDENCIES
   jquery-rails
   mime-types (~> 2.4.3)
   netrc (~> 0.10.3)
+  pry
   rails (= 4.2.1)
   rdoc (~> 4.2.0)
   rest-client (~> 1.8.0)
