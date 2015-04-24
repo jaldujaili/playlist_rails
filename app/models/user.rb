@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   has_many :playlists
+  has_many :songs,    through: :playlists
+  has_many :artists,  through: :playlists
+  has_many :albums,   through: :playlists
 
   # validates_uniquesness_of :email
 

@@ -15,6 +15,10 @@ describe User do
   it {is_expected.to be_valid}
 
   it {is_expected.to have_many(:playlists)}
+  it {is_expected.to have_many(:albums)}
+  it {is_expected.to have_many(:artists)}
+  it {is_expected.to have_many(:songs)}
+
 
 
   describe "#generate_authentication_token!" do
