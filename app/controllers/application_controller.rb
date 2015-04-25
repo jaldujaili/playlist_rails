@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
+  helper_method :current_playlist
   include Authenticable
   # private
   # def authenticate
@@ -28,5 +29,11 @@ class ApplicationController < ActionController::Base
       render json: {error: {message: "Failed to authenticate user"}}, status: 401
     end
     true
+  end
+
+  private
+  def current_playlist
+    puts "current_user.id: #{current_user.id}"
+    @current_playlist ||= Playlist.where({user_id: current_user.id}).first
   end
 end

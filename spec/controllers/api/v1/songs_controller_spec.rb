@@ -11,8 +11,10 @@ describe Api::V1::SongsController, type: :controller do
     before(:each) do
        @song = FactoryGirl.create :song
        @playlist = FactoryGirl.create :playlist
+       @playlist_song = FactoryGirl.create :playlist_song
        @user = FactoryGirl.create :user
-       get :show, id: @song, playlist_id: @playlist.id, user_id: @user.id, format: :json
+
+       get :show, id: @song, playlist_id: @playlist.id, playlist_song_id: @playlist_song.id, user_id: current_user.id, format: :json
     end
     it "return info on a hash" do
        expect(json_response[:title]).to eql @song.title
@@ -21,13 +23,20 @@ describe Api::V1::SongsController, type: :controller do
   end
   describe "GET #index"do
     before(:each) do
-      @song = FactoryGirl.create_list :song, 4
-      @playlist = FactoryGirl.create :playlist
       @user = FactoryGirl.create :user
-      get :index, id: @song, playlist_id: @playlist.id, user_id: current_user.id, format: :json
+      @playlist = FactoryGirl.create :playlist, user_id: @user.id
+      @song = FactoryGirl.create_list :song, 4
+      @playlist_song = FactoryGirl.create_list :playlist_song, 4, playlist_id: @playlist.id
+
+
+      binding.pry
+      get :index, playlist_id: @playlist.id, playlist_song_id: @playlist_song.first.id, user_id: @user.id, format: :json
     end
+
+
     it "returns record from database" do
-      expect(json_response.count).to eql(4)
+      puts json_response
+      json_response.each { |song| expect(song[:playlist_id]).to eq(current_playlist.id) }
     end
     it {should respond_with 200}
   end

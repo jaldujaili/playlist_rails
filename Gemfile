@@ -59,4 +59,5 @@ end
 gem "devise"
 gem 'ffaker', :group => [:development, :test]
 gem "pry"
+gem "rails-api"
 

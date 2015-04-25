@@ -15,6 +15,12 @@ namespace :create do
     puts "#{@artist.name}"
   end
 
+  desc "create playlist_songs data"
+  task :playlist_song=> :environment do
+    require File.expand_path("spec/factories/playlist_songs.rb")
+    @playlist_song= FactoryGirl.create :playlist_song
+  end
+
   desc "create playlist data"
   task :playlist=> :environment do
     require File.expand_path("spec/factories/playlists.rb")
@@ -60,7 +66,6 @@ namespace :create do
     else
       puts "you have a lot of playlists"
     end
-
     if Artist.all.size <30
       10.times do
         Rake::Task['create:artist'].reenable
@@ -82,8 +87,14 @@ namespace :create do
       Rake::Task['create:song'].reenable
       Rake::Task['create:song'].invoke
     end
-    end
 
+    if PlaylistSong.all.size <30
+      10.times do
+        Rake::Task['create:playlist_song'].reenable
+        Rake::Task['create:playlist_song'].invoke
+      end
+    end
+  end
 
   desc "create all data"
   task :all=> [:playlist, :artist, :song, :album, :user]

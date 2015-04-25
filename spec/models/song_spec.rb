@@ -10,6 +10,7 @@ describe Song do
   it { is_expected.to respond_to(:genre)}
 
   it {is_expected.to belong_to(:artist)}
-  it {is_expected.to belong_to(:playlist)}
+  it {is_expected.to have_many(:playlist_songs)}
+  it {is_expected.to have_many(:playlists).through(:playlist_songs)}
   it {is_expected.to belong_to(:album)}
   end

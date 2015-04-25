@@ -7,8 +7,8 @@ describe Playlist do
 
   it {is_expected.to respond_to(:title)}
   it {is_expected.to have_many(:artists)}
-  it {is_expected.to have_many(:songs)}
-  it {is_expected.to have_many(:albums). through(:artists)}
+  it {is_expected.to have_many(:songs).through(:playlist_songs)}
+  it {is_expected.to have_many(:albums)}
   it {is_expected.to belong_to(:user)}
 
 it "must have title" do

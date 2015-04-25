@@ -5,7 +5,8 @@ class Api::V1::SongsController < ApplicationController
   respond_to :json
 
    def index
-     render json: Song.all
+     # binding.pry
+     render json: current_playlist.songs
    end
 
    def show

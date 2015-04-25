@@ -18,7 +18,7 @@ describe Api::V1::PlaylistsController, type: :controller do
 
     it "should belong to current user" do
       json_response.each { |playlist| expect(playlist[:user_id]).to eq(current_user.id) }
-    end
+       end
 
 
     it {should respond_with 200}
@@ -52,6 +52,7 @@ describe Api::V1::PlaylistsController, type: :controller do
       end
       it {should respond_with 201}
     end
+    end
 
 
   context "when is not created" do
@@ -68,13 +69,13 @@ describe Api::V1::PlaylistsController, type: :controller do
       expect(json_response[:playlist]).to have_key(:errors)
     end
 
-    it "renders an error when the playlist could nto be created" do
+    it "renders an error when the playlist could nto be creatsponse" do
       expect(json_response[:playlist][:errors][:title]).to eql ["can't be blank"]
     end
 
     it {should respond_with 422}
   end
-end
+
 
 describe "PUT/PATCH #update" do
     before(:each) do
@@ -123,9 +124,9 @@ describe "PUT/PATCH #update" do
       api_authorization_header @user.auth_token
     end
     it "deletes the playlist" do
-      expect{ delete :destroy, user_id: current_user,
-                     id: @playlist.id, format: :json}.to change(Playlist,:count).by(-1)
+      expect{ delete :destroy, user_id: current_user, id: @playlist.id, format: :json}.to change(Playlist,:count).by(-1)
       expect(response.status).to be_equal(204)
+
     end
   end
 end

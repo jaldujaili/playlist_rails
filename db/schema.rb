@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421044923) do
+ActiveRecord::Schema.define(version: 20150424183742) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 20150421044923) do
   add_index "artists", ["name"], name: "index_artists_on_name"
   add_index "artists", ["playlist_id"], name: "index_artists_on_playlist_id"
 
+  create_table "playlist_songs", force: :cascade do |t|
+    t.integer "playlist_id"
+    t.integer "song_id"
+  end
+
+  add_index "playlist_songs", ["playlist_id"], name: "index_playlist_songs_on_playlist_id"
+  add_index "playlist_songs", ["song_id"], name: "index_playlist_songs_on_song_id"
+
   create_table "playlists", force: :cascade do |t|
     t.string   "title"
     t.integer  "user_id"
@@ -49,16 +57,14 @@ ActiveRecord::Schema.define(version: 20150421044923) do
     t.string   "title"
     t.integer  "length"
     t.string   "genre"
-    t.integer  "playlist_id"
     t.integer  "artist_id"
     t.integer  "album_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "songs", ["album_id"], name: "index_songs_on_album_id"
   add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
-  add_index "songs", ["playlist_id"], name: "index_songs_on_playlist_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
