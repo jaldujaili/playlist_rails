@@ -23,14 +23,13 @@ describe Api::V1::SongsController, type: :controller do
   end
   describe "GET #index"do
     before(:each) do
-      @user = FactoryGirl.create :user
-      @playlist = FactoryGirl.create :playlist, user_id: @user.id
+
+      @playlist = FactoryGirl.create :playlist, user_id: current_user.id
       @song = FactoryGirl.create_list :song, 4
       @playlist_song = FactoryGirl.create_list :playlist_song, 4, playlist_id: @playlist.id
 
 
-      binding.pry
-      get :index, playlist_id: @playlist.id, playlist_song_id: @playlist_song.first.id, user_id: @user.id, format: :json
+      get :index, playlist_id: @playlist.id, playlist_song_id: @playlist_song.first.id, user_id: current_user.id, format: :json
     end
 
 
