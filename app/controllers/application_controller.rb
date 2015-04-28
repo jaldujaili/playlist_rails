@@ -15,11 +15,9 @@ class ApplicationController < ActionController::Base
     return nil if request.headers["HTTP_AUTHORIZATION"].blank?
     request.headers["HTTP_AUTHORIZATION"].gsub("Token token=\"", "").gsub("\"", "")
   end
-  # def require_api_auth
-  #   auth_token == "tr34tm4t3"
-  # end
+
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user
   end
 
   def require_user
@@ -32,7 +30,8 @@ class ApplicationController < ActionController::Base
   end
 
   def current_playlist
-    puts "current_user.id: #{current_user.id}"
+
+    puts "!current_playlist= #{Playlist.where({user_id: current_user.id}).first} "
     @current_playlist ||= Playlist.where({user_id: current_user.id}).first
   end
 end

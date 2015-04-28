@@ -60,4 +60,4 @@ gem "devise"
 gem 'ffaker', :group => [:development, :test]
 gem "pry"
 gem "rails-api"
-
+gem 'acts_as_api'

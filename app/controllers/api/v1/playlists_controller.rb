@@ -1,10 +1,12 @@
 class Api::V1::PlaylistsController < ApplicationController
-  # skip_before_filter  :verify_authenticity_token
+  skip_before_filter  :verify_authenticity_token
   before_action :require_user
   respond_to :json
 
   def index
-    render json: current_user.playlists
+    puts "#{params}"
+    # @playlist = current_user.playlists.all
+    render json: current_user.playlists, status: 200
   end
 
  def show

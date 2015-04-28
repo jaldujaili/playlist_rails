@@ -1,7 +1,8 @@
 class Api::V1::ArtistsController < ApplicationController
   before_filter :authorize, only: [:destroy, :update]
       def index
-        render json: Artist.all
+        @artist = current_playlist.artists
+        render json: current_playlist.artists
       end
 
        def show

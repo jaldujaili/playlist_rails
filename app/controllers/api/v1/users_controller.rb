@@ -12,14 +12,11 @@ class Api::V1::UsersController < ApplicationController
       render json: current_user
    end
 
-  def new
-    @user = User.new
-  end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
+      # session[:user_id] = @user.id
       render json: @user.to_json, status: 201, location: [:api, @user]
     else
       render json: {user: {errors: @user.errors}}.to_json, status: 422

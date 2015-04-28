@@ -34,8 +34,7 @@ describe Api::V1::SongsController, type: :controller do
 
 
     it "returns record from database" do
-      puts json_response
-      json_response.each { |song| expect(song[:playlist_id]).to eq(current_playlist.id) }
+      expect(json_response.count).to eql(4)
     end
     it {should respond_with 200}
   end

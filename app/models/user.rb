@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  # act_as_api
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   has_many :playlists
@@ -26,5 +29,10 @@ class User < ActiveRecord::Base
   def current_playlist
     @current_playlist ||= Playlist.where('current = ?', true).first
   end
+
+  # api_accessible :user_template do |template|
+  #   template.add :name
+  #   template.add :email
+  # end
 
 end

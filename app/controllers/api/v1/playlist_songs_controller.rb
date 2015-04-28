@@ -1,18 +1,18 @@
-class PlaylistSongsController < ApplicationController
-  before_action :set_playlist_song, only: [:show, :update, :destroy]
-
+class Api::V1::PlaylistSongsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+  before_action :require_user
+  respond_to :json
   # GET /playlist_songs
   # GET /playlist_songs.json
   def index
-    @playlist_songs = PlaylistSong.all
-
-    render json: @playlist_songs
+  @playlist_song = current_playlist.playlist_songs
+    render json: @playlist_song
   end
 
   # GET /playlist_songs/1
   # GET /playlist_songs/1.json
   def show
-    render json: @playlist_song
+    render json: PlaylistSong.find(params[:id])
   end
 
   # POST /playlist_songs
@@ -54,6 +54,6 @@ class PlaylistSongsController < ApplicationController
     end
 
     def playlist_song_params
-      params[:playlist_song]
+      params[:playlist_song].permit!
     end
 end
