@@ -4,9 +4,13 @@ class Api::V1::SongsController < ApplicationController
   before_action :require_user, except: :create
   respond_to :json
 
-   def index
-     puts "current_playlist= #{current_playlist}"
-     render json: current_playlist.songs
+  def index
+    # binding.pry
+    @songs = current_playlist.songs
+    # puts "@songs: #{@songs}"
+    # logger.info "======= #{@songs.count}"
+    logger.info "======= #{@playlist.id}"
+    render json: current_playlist.songs
    end
 
    def show

@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
   def require_user
     # return if Rails.env.development?
     @current_user = User.token_authenticate!(auth_token)
+
     if @current_user.blank?
       render json: {error: {message: "Failed to authenticate user"}}, status: 401
     end
@@ -31,7 +32,7 @@ class ApplicationController < ActionController::Base
 
   def current_playlist
 
-    puts "!current_playlist= #{Playlist.where({user_id: current_user.id}).first} "
+    # puts "!current_playlist= #{Playlist.where({user_id: current_user.id}).first} "
     @current_playlist ||= Playlist.where({user_id: current_user.id}).first
   end
 end

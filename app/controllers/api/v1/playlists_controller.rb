@@ -4,7 +4,7 @@ class Api::V1::PlaylistsController < ApplicationController
   respond_to :json
 
   def index
-    puts "#{params}"
+    logger.info "======= #{@playlist.id}"
     # @playlist = current_user.playlists.all
     render json: current_user.playlists, status: 200
   end

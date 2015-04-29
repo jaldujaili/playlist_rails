@@ -12,3 +12,5 @@ log/test.log
 .idea/playlist_rails.iml
 
 db/test.sqlite3
+
+log/development.log
