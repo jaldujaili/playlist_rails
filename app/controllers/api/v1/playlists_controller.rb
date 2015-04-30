@@ -4,9 +4,7 @@ class Api::V1::PlaylistsController < ApplicationController
   respond_to :json
 
   def index
-    logger.info "======= #{@playlist.id}"
-    # @playlist = current_user.playlists.all
-    render json: current_user.playlists, status: 200
+    render json: current_user.playlists
   end
 
  def show
@@ -38,4 +36,4 @@ class Api::V1::PlaylistsController < ApplicationController
   def playlist_params
     params.require(:playlist).permit!
   end
-end
+  end

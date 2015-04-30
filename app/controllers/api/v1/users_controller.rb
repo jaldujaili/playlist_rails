@@ -4,14 +4,9 @@ class Api::V1::UsersController < ApplicationController
   before_action :require_user, except: :create
   respond_to :json
 
-  # def index
-  #     @user = user.all
-  #   end
-
    def show
       render json: current_user
    end
-
 
   def create
     @user = User.new(user_params)
@@ -32,7 +27,6 @@ class Api::V1::UsersController < ApplicationController
       render json: {user: { errors: @user.errors }}.to_json, status: 422
       end
     end
-
 
   # def destroy
   #   current_user.destroy

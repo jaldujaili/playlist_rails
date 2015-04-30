@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :albums,            through: :playlists
 
   # validates_uniquesness_of :email
-
+# test
 
 
   before_validation :generate_authentication_token!

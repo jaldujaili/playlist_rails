@@ -21,10 +21,10 @@ describe Api::V1::ArtistsController, type: :controller do
   end
   describe "GET #index"do
     before(:each) do
-      @artist = FactoryGirl.create_list :artist, 4
       @playlist = FactoryGirl.create :playlist
-      @user = FactoryGirl.create :user
-      get :index, id: @artist, playlist_id: @playlist.id, user_id: @user.id, format: :json
+      @artist = FactoryGirl.create_list :artist, 4
+
+      get :index, id: @artist, playlist_id: @playlist.id, format: :json
     end
     it "returns record from database" do
       expect(json_response.count).to eql(4)

@@ -5,15 +5,17 @@ class Api::V1::SongsController < ApplicationController
   respond_to :json
 
   def index
-    # binding.pry
-    @songs = current_playlist.songs
-    # puts "@songs: #{@songs}"
-    # logger.info "======= #{@songs.count}"
-    logger.info "======= #{@playlist.id}"
     render json: current_playlist.songs
    end
 
    def show
      render json: Song.find(params[:id])
    end
+
+    private
+    def current_playlist
+      @current_playlist ||= current_user.playlists.find(params[:playlist_id])
+      # @current_playlist ||Playlist.find_by(user_id: current_user.id, id: params[:playlist_id])
+    end
 end
+

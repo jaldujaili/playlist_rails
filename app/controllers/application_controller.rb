@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   #   end
 
   def auth_token
-    puts request.headers["HTTP_AUTHORIZATION"].inspect
+    # puts request.headers["HTTP_AUTHORIZATION"].inspect
     return nil if request.headers["HTTP_AUTHORIZATION"].blank?
     request.headers["HTTP_AUTHORIZATION"].gsub("Token token=\"", "").gsub("\"", "")
   end
@@ -30,9 +30,5 @@ class ApplicationController < ActionController::Base
     true
   end
 
-  def current_playlist
 
-    # puts "!current_playlist= #{Playlist.where({user_id: current_user.id}).first} "
-    @current_playlist ||= Playlist.where({user_id: current_user.id}).first
-  end
 end
